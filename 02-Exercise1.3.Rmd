@@ -13,12 +13,12 @@ $$(-1)^{x_0}(1+\sum_{i = 1}^tx_i2^{-i})2^k$$
 
 In a 64 bits machine, $x_0$ takes 1 sign bites, significant takes 52 bits, so 
 $t$ can be 52 at most. Exponent $k$ takes 11 bits, so $2^11 = 2048$ possible 
-values. With shifting to negative side, k can be from -1022 to 1024, with one 
-left for sign. 
+values. With shifting to negative side, k can be from -1022 to 1023, with both 
+-1023 (all zeros) amd 1024 (all ones) are left for special numbers.
 
 
 ".Machine$double.xmax" is the largest floating number that computer can display, 
-it is $(1+\sum_{i = 1}^{52}2^{-i})\times 2^{1024}$
+it is $(1+\sum_{i = 1}^{52}2^{-i})\times 2^{1023}$
 
 
 ".Machine$double.xmin" is the smallest floating numer that computer can display, 
